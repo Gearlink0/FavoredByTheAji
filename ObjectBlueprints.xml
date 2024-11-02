@@ -1,0 +1,32 @@
+<objects>
+  <object Name="Gearlink_AJISFAVOR_AjiPet" Inherits="BaseSlug">
+    <part Name="Render" DisplayName="Avri" Tile="PetAji.png" ColorString="&amp;r" DetailColor="K" />
+    <part Name="Description" Short="A soot-caked shell spirals to a point and curves to embrace a plump mass of vitreous resin. Cracks and pops issue from the blob as it flows. Whisps of vapor and heat mirage rise from the preasurized capsule which permits an Aji to venture from the Fuming God's domain and accompany the faithful." />
+    <part Name="ConversationScript" ConversationID="Gearlink_AJISFAVOR_AjiCorpse" />
+    <part Name="Pettable" />
+    <property Name="Story" Value="Gearlink_AJISFAVOR_AjiPetStory" />
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="Billowing Conch of the Aji" />
+    <part Name="DropOnDamage" Blueprint="@Gearlink_AJISFAVOR_AjiGas" MinimumDamage="1" SpawnAsDropColor="false" PopulationRollsAreStatic="false" />
+    <stat Name="Hitpoints" Value="45" />
+    <stat Name="AV" Value="6" />
+    <stat Name="Intelligence" sValue="16" />
+    <stat Name="Willpower" sValue="16" />
+    <stat Name="Ego" sValue="16" />
+    <!-- Aji should be immune to its own gases. Glitter dust doesn't harm anything
+    and not being a plant or fungus, the Aji won't be harmed by defoliant or fungicide. -->
+    <!-- Make the Aji immune to acid gas -->
+    <stat Name="AcidResistance" Value="100" />
+    <!-- Make the Aji immune to ash, poison, sleep, and stun gas -->
+    <!-- TODO: Figure out why this doesn't work. -->
+    <part Name="EffectResistance" Values="PoisonGasPoison,AshPoison,Sleep,StunGasStun" />
+    <tag Name="PetResponse" Value="crackles,pops,shudders,quivers" />
+    <tag Name="StartingPet" />
+    <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+    <tag Name="Gender" Value="female" />
+    <tag Name="PronounSet" Value="she/her" />
+  </object>
+
+  <object Name="Gearlink_AJISFAVOR_AjiCorpse">
+    <part Name="ReplaceObject" Table="Gearlink_AJISFAVOR_AjiCorpseTable" />
+  </object>
+</objects>

@@ -1,0 +1,10 @@
+<conversations>
+  <conversation ID="Gearlink_AJISFAVOR_AjiPet">
+    <start>
+      <text>
+        Live and drink =player.formalAddressTerm=.
+      </text>
+      <choice Target="End">Stay warm and preasurized friend.</choice>
+    </start>
+  </conversation>
+</conversations>
