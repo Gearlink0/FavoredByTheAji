@@ -2,7 +2,7 @@
   <object Name="Gearlink_AJISFAVOR_AjiPet" Inherits="BaseSlug">
     <part Name="Render" DisplayName="Avri" Tile="PetAji.png" ColorString="&amp;r" DetailColor="K" />
     <part Name="Description" Short="A soot-caked shell spirals to a point and curves to embrace a plump mass of vitreous resin. Cracks and pops issue from the blob as it flows. Whisps of vapor and heat mirage rise from the preasurized capsule which permits an Aji to venture from the Fuming God's domain and accompany the faithful." />
-    <part Name="ConversationScript" ConversationID="Gearlink_AJISFAVOR_AjiCorpse" />
+    <part Name="ConversationScript" ConversationID="Gearlink_AJISFAVOR_AjiPet" />
     <part Name="Pettable" />
     <property Name="Story" Value="Gearlink_AJISFAVOR_AjiPetStory" />
     <part Name="Corpse" CorpseChance="100" CorpseBlueprint="Billowing Conch of the Aji" />
@@ -19,6 +19,7 @@
     <!-- Make the Aji immune to ash, poison, sleep, and stun gas -->
     <!-- TODO: Figure out why this doesn't work. -->
     <part Name="EffectResistance" Values="PoisonGasPoison,AshPoison,Sleep,StunGasStun" />
+    <mutation Name="Telepathy" Level="1" />
     <tag Name="PetResponse" Value="crackles,pops,shudders,quivers" />
     <tag Name="StartingPet" />
     <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
