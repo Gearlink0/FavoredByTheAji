@@ -12,13 +12,17 @@
     <stat Name="Intelligence" sValue="16" />
     <stat Name="Willpower" sValue="16" />
     <stat Name="Ego" sValue="16" />
-    <!-- Aji should be immune to its own gases. Glitter dust doesn't harm anything
-    and not being a plant or fungus, the Aji won't be harmed by defoliant or fungicide. -->
-    <!-- Make the Aji immune to acid gas -->
+    <!-- Avri should be immune to her own gases. Glitter dust doesn't harm anything
+    and not being a plant or fungus, Avri won't be harmed by defoliant or fungicide. -->
+    <!-- TODO: If GasImmunity is updated to allow multiple gases, replace all this with
+    that part. -->
+    <!-- Make Avri immune to acid gas -->
     <stat Name="AcidResistance" Value="100" />
-    <!-- Make the Aji immune to ash, poison, sleep, and stun gas -->
-    <!-- TODO: Figure out why this doesn't work. -->
-    <part Name="EffectResistance" Values="PoisonGasPoison,AshPoison,Sleep,StunGasStun" />
+    <!-- Make Avri immune to sleep, and stun gas -->
+    <part Name="EffectResistance" Values="Sleep,StunGasStun" />
+    <!-- Make Avri at least resistant to the poison gas. -->
+    <skill Name="Endurance_PoisonTolerance" />
+    <part Name="GasImmunity" GasType="MiasmaticAsh" />
     <mutation Name="Telepathy" Level="1" />
     <tag Name="PetResponse" Value="crackles,pops,shudders,quivers" />
     <tag Name="StartingPet" />
