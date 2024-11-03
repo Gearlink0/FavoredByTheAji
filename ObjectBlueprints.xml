@@ -12,6 +12,10 @@
     <stat Name="Intelligence" sValue="16" />
     <stat Name="Willpower" sValue="16" />
     <stat Name="Ego" sValue="16" />
+    <!-- Make it so Avri isn't hurt by high heat. but is vulnerable to cold -->
+    <part Name="Physics" FlameTemperature="99999999" VaporTemperature="99999999" />
+    <stat Name="HeatResistance" Value="100" />
+    <stat Name="ColdResistance" Value="-50" />
     <!-- Avri should be immune to her own gases. Glitter dust doesn't harm anything
     and not being a plant or fungus, Avri won't be harmed by defoliant or fungicide. -->
     <!-- TODO: If GasImmunity is updated to allow multiple gases, replace all this with
