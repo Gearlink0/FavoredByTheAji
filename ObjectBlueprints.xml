@@ -24,11 +24,18 @@
     <skill Name="Endurance_PoisonTolerance" />
     <part Name="GasImmunity" GasType="MiasmaticAsh" />
     <mutation Name="Telepathy" Level="1" />
+    <inventoryobject Blueprint="Gearlink_AJISFAVOR_AjiSlam" Number="1" />
     <tag Name="PetResponse" Value="crackles,pops,shudders,quivers" />
     <tag Name="StartingPet" />
     <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
     <tag Name="Gender" Value="female" />
     <tag Name="PronounSet" Value="she/her" />
+  </object>
+
+  <object Name="Gearlink_AJISFAVOR_AjiSlam" Inherits="NaturalWeapon">
+    <part Name="Render" DisplayName="{{r|sublimating mantle}}" Tile="Creatures/natural-weapon-bands.bmp" ColorString="&amp;w"  />
+    <part Name="MeleeWeapon" BaseDamage="1d2" Skill="Cudgel" Stat="Strength" Slot="Body" />
+    <part Name="TemperatureOnHit" Amount="6d20" Max="false" OnWielderHit="false" />
   </object>
 
   <object Name="Gearlink_AJISFAVOR_AjiCorpse">
